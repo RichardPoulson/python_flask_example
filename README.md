@@ -3,6 +3,9 @@ Example Python package that uses the Flask web application framework.
 
 ## References:
 - **[Flask](https://palletsprojects.com/p/flask/ "\"Flask is a lightweight WSGI web application framework.\"")**
+- PyCharm IDE:
+  - [Configure a virtual environment - Help | PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#)
+  - [Install, uninstall, and upgrade packages - Help | PyCharm](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html)
 - **Testing:**
   - [check-manifest](https://pypi.org/project/check-manifest/)
   - [pytest](https://pypi.org/project/pytest/)
