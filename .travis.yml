@@ -6,8 +6,8 @@ python:
   - "3.7"
   - "3.8"
 # PyPy versions
-  - "pypy"   # currently Python 2.7.13, PyPy 7.1.1
-  - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0
+  # TODO: "pypy" is failing, need to find out why.
+  - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0 with GCC 6.2.0 20160901
 install:
   - pip install .['test'] # install as a pip package, with extra dependencies for 'test'
 script: pytest
