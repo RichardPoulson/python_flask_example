@@ -16,4 +16,5 @@ deploy:
   app: infinite-brook-42829
   on:
     repo: RichardPoulson/python_flask_example
+  skip_existing: true
   skip_cleanup: 'true'
