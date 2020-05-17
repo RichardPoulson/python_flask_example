@@ -149,7 +149,7 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['flask'],  # Optional
+    install_requires=['flask', 'wheel'],  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
@@ -166,9 +166,13 @@ setup(
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.
-    # package_data={  # Optional
-    #     'sample': ['package_data.dat'],
-    # },
+    package_data={  # Optional
+        'python_flask_example': ['*.sql', 'static/*.css', 'templates/*.html', 'templates/**/*.html'],
+    },
+    include_package_data=True,
+
+    ###
+    zip_safe=False,
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
