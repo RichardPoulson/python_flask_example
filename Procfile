@@ -1,1 +1,1 @@
-web: gunicorn python-flask-example:app
+web: gunicorn python_flask_example:app
