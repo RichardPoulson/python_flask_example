@@ -1,1 +1,1 @@
-web: gunicorn python_flask_example:app
+web: gunicorn python_flask_example:create_app()
