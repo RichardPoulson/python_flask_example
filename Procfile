@@ -1,1 +1,1 @@
-web: gunicorn python_flask_example:app.run(threaded=True, port=5000)
+web: gunicorn python_flask_example:create_app().run()
