@@ -13,7 +13,7 @@ deploy:
   provider: heroku
   api_key:
     secure: tkMCr9clmNg1gSXyjTr+FFbPbjIKdPltnYdoEgaCICm2kVZdOugqcKJ2xqmQnaUzTPzY88ki8NbiPPJHShBKDHIo4PKH2xluHqa1G7nwmsSr/tw4ahMmhMZjljK+67PLib/0YF5MlYp68mLOdWUHMvcRuGnvuOx5dSYiSnlGO/xK+ubULlBr9SSwZLuUwX0pEFF4GhoqdCk5CSVb1HgvJcJFVPQtrPWqIhuIjStwReczuH1uLt4iA4Jfk9GAzTD/IKctimZiSEs04iY9u0d/u+U7KRD3qwynyr+zFlN7AFyflob55w+Lr7YIlyRLSinKPi0imwUJxkKLzrzENHM0pm3pVORGoebkfA5e1L3kUCKvo2snyPeguao5ZVaOPLTBg4kv9ys2LU/Cq8n4CpNFuPMLhS3Erwtio3I6hd2/ARZOxzTPwKX5wQNdiFs8WZ4Nh5ZsHzIocACvYvM+I8uagk4S5CNXmu6A/n+ra+rg0EQV5jcGMGviuMzVuDJm1VltmHHy4+picwRkj8YY5yx6EPkc0FZfzGmr7ZuOur/4FZw7y9delw4WP/05tHOe6pUX6nhwrvS5nQvBOMYEl9m5RRtWGSvF8tZ13uzV7AeKdhAHzRQVEGoMSA6Hc5CYvFOW+CuRqMCg0ko4lycAIsEZn3d+ECfazmIzTWProIAYhTk=
-  app: python_flask_example
+  app: infinite-brook-42829
   on:
     repo: RichardPoulson/python_flask_example
   skip_cleanup: 'true'
