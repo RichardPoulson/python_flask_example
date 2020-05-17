@@ -1,8 +1,15 @@
 import os
-
+import tempfile
 from flask import Flask
 
-def create_app(test_config=None):
+from python_flask_example.db import get_db
+from python_flask_example.db import init_db
+
+# read in SQL for populating test data
+with open(os.path.join(os.path.dirname(__file__), "data.sql"), "rb") as f:
+    _data_sql = f.read().decode("utf8")
+
+def create_app(test_config=None, extra_config_settings={}):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
@@ -49,6 +56,12 @@ def create_app(test_config=None):
     return app
 
 
-# app = create_app()
+def app():
+    application = create_app()
+    with application.app_context():
+        init_db()
+        get_db()
+        # get_db().executescript(_data_sql)
+    return application
 
 
