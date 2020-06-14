@@ -9,6 +9,7 @@ from python_flask_example.db import init_db
 with open(os.path.join(os.path.dirname(__file__), "data.sql"), "rb") as f:
     _data_sql = f.read().decode("utf8")
 
+
 def create_app(test_config=None, extra_config_settings={}):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__, instance_relative_config=True)
@@ -63,5 +64,3 @@ def app():
         get_db()
         # get_db().executescript(_data_sql)
     return application
-
-
