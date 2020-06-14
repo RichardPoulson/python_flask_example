@@ -55,6 +55,7 @@ coverage html  # open htmlcov/index.html in a browser
 
 ## References:
 - **[Flask](https://palletsprojects.com/p/flask/ "\"Flask is a lightweight WSGI web application framework.\"")**
+- **[Using OAuth 2.0 for Web Server Applications - Google API Client Library for Python](https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth-web.md)**
 - PyCharm IDE:
   - [Configure a virtual environment - Help | PyCharm](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#)
   - [Install, uninstall, and upgrade packages - Help | PyCharm](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html)
