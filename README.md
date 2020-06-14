@@ -14,16 +14,10 @@ python3 -m venv venv
 . venv/bin/activate
 ```
 
-###### Or on Windows cmd:
-```
-py -3 -m venv venv
-venv\Scripts\activate.bat
-```
+* ###### [Setup virtual environment with PyCharm IDE and Anaconda](https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/)
 
-###### [Or with PyCharm IDE](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html# "\"PyCharm makes it possible to use the virtualenv tool to create a project-specific isolated virtual environment.\"")
-
-#### Install python_example_package:
-`pip install -e .`
+#### Install python_example_package in editable mode:
+`pip install -e '.[test]'`
 
 #### Run example Flask app:
 ```
@@ -32,17 +26,9 @@ export FLASK_ENV=development
 flask init-db
 flask run
 ```
-##### Or on Windows cmd:
-```
-set FLASK_APP=python_flask_example
-set FLASK_ENV=development
-flask init-db
-flask run
-```
 
 #### Test
 ```
-pip install '.[test]'
 pytest
 ```
 
