@@ -1,14 +1,16 @@
 html, body { height: 100%; }
-body { background: url("./photo-of-white-wall-1484759.jpg") center/cover no-repeat fixed; }
+body { background: url("./blank-business-composition-computer-373076.jpg") center/cover no-repeat fixed; }
 body > .container-sm { max-width: 960px; }
-input.form-control { margin: 0.5rem 0rem; }
-h1.display-4 { padding: 2rem 1rem; }
+.min-w-50 { min-width: 50%; }
 h1.display-4 > a { color: inherit; }
-.navbar-text { margin-right: 1rem; }
 section.content > * {
     max-width: 80%;
     margin: 1rem auto;
 }
 article.post {
     background-color: rgba(255,255,255, 0.8);
+    border-radius: 15px;
 }
+.bg-grad1 { background-image: linear-gradient(to bottom, #f2e1f1 0%, #e1e1f2 100%); }
+.bg-color1 { background-color: #f2e1f1; }
+.rounded-xlg { border-radius: 40px; }
