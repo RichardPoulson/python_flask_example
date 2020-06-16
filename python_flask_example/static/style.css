@@ -13,4 +13,5 @@ article.post {
 }
 .bg-grad1 { background-image: linear-gradient(to bottom, #f2e1f1 0%, #e1e1f2 100%); }
 .bg-color1 { background-color: #f2e1f1; }
+.bg-color1t { background-color: rgba(242,225,241, 0.5); }
 .rounded-xlg { border-radius: 40px; }
