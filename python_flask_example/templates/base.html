@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-grad1">
-      <h1 class="navbar-brand">
-        <a href="{{ url_for('index') }}" class="nav-link">Sample Flask web application</a>
+    <nav class="navbar navbar-expand-sm navbar-light bg-grad1 py-0">
+      <h1 class="navbar-brand my-0">
+        <a href="{{ url_for('index') }}" class="nav-link">Flask Blog Application</a>
       </h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,18 +18,18 @@
         <ul class="navbar-nav ml-auto">
           {% if g.user %}
             <li class="nav-item">
-              <span class="navbar-text"><strong>{{ g.user['username'] }}</strong></span>
+              <span class="navbar-text m-1"><strong>{{ g.user['username'] }}</strong></span>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.logout') }}">Log Out</a></li>
+            <li class="nav-item m-1"><a class="nav-link" href="{{ url_for('auth.logout') }}">Log Out</a></li>
           {% else %}
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.register') }}">Register</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Log In</a></li>
+            <li class="nav-item m-1"><a class="nav-link" href="{{ url_for('auth.register') }}">Register</a></li>
+            <li class="nav-item m-1"><a class="nav-link" href="{{ url_for('auth.login') }}">Log In</a></li>
           {% endif %}
         </ul>
       </div>
     </nav>
       <div class="container-sm p-2">
-        <section class="content d-flex flex-column p-2">
+        <section class="content d-flex flex-column mx-auto p-2">
           <header>
             {% block header %}{% endblock %}
           </header>

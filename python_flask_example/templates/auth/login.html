@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1 class="display-4 text-center bg-color1 rounded-xlg py-3 px-5">{% block title %}Log In{% endblock %}</h1>
+  <h1 class="display-4 text-center bg-color1 rounded-xlg shadow py-3 px-5">{% block title %}Log In{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-  <form method="post" class="min-w-50">
+  <form method="post" class="min-w-50 p-3 bg-grad1 rounded shadow">
     <div class="form-group">
       <label for="username">Username</label>
       <input name="username" id="username" required class="form-control min-w-50 my-1">
@@ -14,6 +14,6 @@
       <label for="password">Password</label>
       <input type="password" name="password" id="password" required class="form-control min-w-50 my-1">
     </div>
-    <button type="submit" class="btn btn-primary mt-4">Log In</button>
+    <button type="submit" class="btn btn-primary shadow mt-4">Log In</button>
   </form>
 {% endblock %}
