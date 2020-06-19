@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post">
+  <form method="post" class="d-flex flex-column w-75 bg-color3 p-3 rounded-lg shadow">
     <label for="title">Title</label>
-    <input name="title" id="title" value="{{ request.form['title'] }}" required>
+    <input name="title" id="title" value="{{ request.form['title'] }}" required class="mb-4 m-1 mr-5">
     <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
-    <input type="submit" value="Save">
+    <textarea name="body" id="body" class="mb-4 m-1" rows="3">{{ request.form['body'] }}</textarea>
+    <button type="submit" class="btn btn-primary shadow-sm mx-auto">Save</button>
   </form>
 {% endblock %}

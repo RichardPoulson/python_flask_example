@@ -1,6 +1,9 @@
 import os
 import tempfile
 from flask import Flask
+import sass
+from sassutils.wsgi import SassMiddleware
+
 
 from python_flask_example.db import get_db
 from python_flask_example.db import init_db
@@ -19,6 +22,16 @@ def create_app(test_config=None, extra_config_settings={}):
         # store the database in the instance folder
         DATABASE=os.path.join(app.instance_path, "python_flask_example.sqlite"),
     )
+
+    # 'strip_extension': False,
+    app.wsgi_app = SassMiddleware(app.wsgi_app, {
+        'python_flask_example': {
+            'sass_path': 'static/sass',
+            'css_path': 'static/css',
+            'wsgi_path': 'static/css',
+            'strip_extension': False,
+        }
+    })
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -61,6 +74,6 @@ def app():
     application = create_app()
     with application.app_context():
         init_db()
-        get_db()
-        # get_db().executescript(_data_sql)
+        #get_db()
+        get_db().executescript(_data_sql)
     return application

@@ -5,15 +5,15 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post">
+  <form method="post" class="d-flex flex-column w-75 bg-color3 p-3 rounded-lg shadow-sm">
     <label for="title">Title</label>
-    <input name="title" id="title" value="{{ request.form['title'] or post['title'] }}" required>
+    <input name="title" id="title" value="{{ request.form['title'] or post['title'] }}" required class="m-1 mb-4 mr-5">
     <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
-    <input type="submit" value="Save">
+    <textarea name="body" id="body" class="m-1 mb-4" rows="3">{{ request.form['body'] or post['body'] }}</textarea>
+    <button type="submit" class="btn btn-primary shadow mx-auto">Save</button>
   </form>
   <hr>
   <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post">
-    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+    <button type="submit" class="btn btn-danger danger shadow-sm mx-auto" onclick="return confirm('Are you sure?');">Delete</button>
   </form>
 {% endblock %}
